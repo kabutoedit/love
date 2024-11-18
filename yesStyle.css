@@ -23,7 +23,7 @@ body {
 }
 
 .header_text {
-    font-family: cursive;
+    font-family: monospace;
     font-size: 50px;
     font-weight: bold;
     color: white;
@@ -43,7 +43,7 @@ body {
 }
 
 .text {
-    font-family: 'Nunito';
+    font-family: monospace;;
     font-size: 25px;
     font-weight: bold;
     color: white;
@@ -80,7 +80,10 @@ body {
     background-color: #FAF9F6;
 }
 
-.gif_container {
+.gif_container2 {
+    margin-top: 450px;
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: center;
     align-items: center;

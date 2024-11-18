@@ -20,10 +20,14 @@ canvas {
   background-color:#312;
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 
 h1 {
+  font-family: monospace;
   margin-top: 1000px;
   position: absolute;
   z-index: 2;
@@ -51,7 +55,7 @@ body {
 }
 
 .container {
-    margin-bottom: 800px;
+    margin-bottom: 900px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -66,6 +70,7 @@ body {
     /* Smooth movement */
 }
 .text {
+    font-family: monospace;
     background: white;
     width: 900px;
     height: 70px;
@@ -82,7 +87,7 @@ body {
 }
 
 .header_text {
-    font-family: cursive;
+    font-family: monospace;
     font-size: 50px;
     font-weight: bold;
     color: white;

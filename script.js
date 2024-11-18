@@ -31,12 +31,12 @@ function init() {
 			container.addChild(heart);
 		}
 
-  var text = new createjs.Text("I love you", "bold 24px Arial", "#fff");
-  text.textAlign = "center";
-  text.margin = 1000;
-  text.x = w / 2;
-  text.y = h / 3 - text.getMeasuredLineHeight();
-  stage.addChild(text);
+  // var text = new createjs.Text("I love you", "bold 24px Arial", "#fff");
+  // text.textAlign = "center";
+  // text.margin = 1000;
+  // text.x = w / 2;
+  // text.y = h / 3 - text.getMeasuredLineHeight();
+  // stage.addChild(text);
 
   for (i = 0; i < 100; i++) {
     var captureContainer = new createjs.Container();
