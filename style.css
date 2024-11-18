@@ -104,6 +104,19 @@ body {
   margin-top: 350px;
 }
 
+a {
+  z-index: 5;
+  margin-top: 50px;
+  text-decoration: none;
+  font-family: monospace;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(255, 49, 169);
+  text-shadow: rgb(255, 255, 255) 0px 0px 10px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
 input {
   width: 200px;
   height: 30px;
