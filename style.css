@@ -65,14 +65,20 @@ body {
 
 
 .text {
-    font-family: monospace;
-    background: white;
     width: 900px;
     height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 15px;
+    z-index: 5;
+    font-family: monospace;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: #312 0px 0px 10px;
+    text-align: center;
+    padding-bottom: 5px;
 }
 
 
@@ -84,6 +90,44 @@ body {
     text-shadow: #312 0px 0px 10px;
     text-align: center;
     padding-bottom: 5px;
+}
+
+.header_text2 {
+  font-size: 30px;
+  width: 300px;
+  margin-top: -150px;
+}
+
+.container2 {
+  gap: 10px;
+  z-index: 5;
+  margin-top: 350px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  z-index: 5;
+  font-family: monospace;
+  font-weight: bold;
+  text-shadow: #312 0px 0px 10px;
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+.send {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  z-index: 5;
+  font-family: monospace;
+  font-weight: bold;
+  text-shadow: #312 0px 0px 10px;
+  text-align: center;
 }
 
 .btn {
