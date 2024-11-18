@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+canvas {
+  position: absolute;
+  z-index: 1;
+  background-color:#312;
+  width: 100%;
+  height: 100%;
+}
+
+
+h1 {
+  margin-top: 1000px;
+  position: absolute;
+  z-index: 2;
+  color: white;
+}
+
+ .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F8C8DC;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin-bottom: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Position the "No" button absolutely within body */
+#noButton {
+    /* position: absolute;
+    margin-left: 150px;
+    transition: 0.5s; */
+    /* Smooth movement */
+}
+.text {
+    background: white;
+    width: 900px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#yesButton {
+    /* position: absolute;
+    margin-right: 150px; */
+    /* Smooth movement */
+}
+
+.header_text {
+    font-family: cursive;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    text-shadow: #312 0px 0px 10px;
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+.btn {
+    width: 200px;
+    height: 100px;
+    background-color: deeppink;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 50px;
+    margin: 40px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+
+}
+
+.btn:hover {
+    background-color: #FAF9F6;
+}
+
+.gif_container {
+    margin-top: 450px;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 90px;
+}
+
+img {
+    width: 400px;
+    /*height: ;*/
+}
+
+#yesButton {
+    /* position: absolute; */
+    /* right: 850px; */
+}

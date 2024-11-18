@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="yesStyle.css">
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <canvas id="testCanvas">
+      </canvas>
+        <!-- <h1>Может как нибудь погуляем?</h1>
+
+        <div class="btns">
+          <button>Да</button>
+          <button>Нет</button>
+        </div> -->
+
+        
+    <div class="container">
+        <div class="text">
+            <h1 class="header_text">Может как нибудь погуляем?</h1>
+        </div>
+        <div class="gif_container">
+            <img src="https://media.giphy.com/media/LnKonfpQ44fNvuGLkA/giphy.gif" alt="Cute animated illustration">
+        </div>
+        <div class="buttons">
+            <button class="btn" id="yesButton" onclick="nextPage()">Да</button>
+            <button class="btn" id="noButton" onmouseover="moveButton()">Нет</button>
+        </div>
+    </div>
+
+    </div>
+  </body>
+
+  <script>
+    function nextPage() {
+        window.location.href = "yes.html";
+    }
+
+
+    function moveButton() {
+      const noButton = document.getElementById('noButton');
+      const buttonRect = noButton.getBoundingClientRect(); // Получаем текущие координаты кнопки
+
+      // Определяем начальные координаты
+      const startX = buttonRect.left;
+      const startY = buttonRect.top;
+
+      // Рассчитываем новые координаты в пределах диапазона 100x100
+      const x = startX + Math.random() * 100 - 50; // Диапазон: ±50 пикселей от начальной позиции
+      const y = startY + Math.random() * 100 - 50; // Диапазон: ±50 пикселей от начальной позиции
+
+      // Устанавливаем новые координаты кнопки
+      noButton.style.position = 'absolute';
+      noButton.style.left = `${Math.max(0, Math.min(window.innerWidth - noButton.offsetWidth, x))}px`;
+      noButton.style.top = `${Math.max(0, Math.min(window.innerHeight - noButton.offsetHeight, y))}px`;
+      noButton.blur(); // Убираем фокус с кнопки
+}
+  </script>
+  
+<script
+  src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
+  integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="
+  crossorigin="anonymous"></script>
+  <script src="https://code.createjs.com/1.0.0/easeljs.min.js"></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/1524180/codepen-template-1.0.js"></script>
+  <script src="script.js"></script>
+</html>
