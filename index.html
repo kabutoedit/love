@@ -8,14 +8,6 @@
     <div class="wrapper">
       <canvas id="testCanvas">
       </canvas>
-        <!-- <h1>Может как нибудь погуляем?</h1>
-
-        <div class="btns">
-          <button>Да</button>
-          <button>Нет</button>
-        </div> -->
-
-        
     <div class="container">
         <div class="text">
             <h1 class="header_text">Может как нибудь погуляем?</h1>
@@ -32,32 +24,84 @@
     </div>
   </body>
 
-  <script>
-    function nextPage() {
-        window.location.href = "yes.html";
-    }
-
-
-    function moveButton() {
-      const noButton = document.getElementById('noButton');
-      const buttonRect = noButton.getBoundingClientRect(); // Получаем текущие координаты кнопки
-
-      // Определяем начальные координаты
-      const startX = buttonRect.left;
-      const startY = buttonRect.top;
-
-      // Рассчитываем новые координаты в пределах диапазона 100x100
-      const x = startX + Math.random() * 100 - 50; // Диапазон: ±50 пикселей от начальной позиции
-      const y = startY + Math.random() * 100 - 50; // Диапазон: ±50 пикселей от начальной позиции
-
-      // Устанавливаем новые координаты кнопки
-      noButton.style.position = 'absolute';
-      noButton.style.left = `${Math.max(0, Math.min(window.innerWidth - noButton.offsetWidth, x))}px`;
-      noButton.style.top = `${Math.max(0, Math.min(window.innerHeight - noButton.offsetHeight, y))}px`;
-      noButton.blur(); // Убираем фокус с кнопки
-}
-  </script>
   
+    <script>
+
+      
+    // function nextPage() {
+    //       const yesButton = document.getElementById('yesButton');
+    //       yesButton.blur();
+    //       window.location.href = "yes.html"; // Переход на другую страницу
+    //   }
+
+    // function moveButton() {
+
+
+    //     const noButton = document.getElementById("noButton");
+
+    //     // Получаем размеры окна и кнопки
+    //     const windowWidth = window.innerWidth;
+    //     const windowHeight = window.innerHeight;
+    //     const buttonWidth = noButton.offsetWidth;
+    //     const buttonHeight = noButton.offsetHeight;
+
+    //     // Рассчитываем случайные координаты так, чтобы кнопка оставалась видимой
+    //     const randomX = Math.random() * (windowWidth - buttonWidth);
+    //     const randomY = Math.random() * (windowHeight - buttonHeight);
+
+    //     // Применяем новые координаты к кнопке
+    //     noButton.style.position = "absolute";
+    //     noButton.style.left = `${randomX}px`;
+    //     noButton.style.top = `${randomY}px`;
+    // }
+
+    function nextPage() {
+          const yesButton = document.getElementById('yesButton');
+          yesButton.blur();
+          window.location.href = "yes.html"; // Переход на другую страницу
+      }
+
+      function moveButton() {
+          const noButton = document.getElementById("noButton");
+          const container = document.querySelector('.container'); // Родительский блок
+
+          // Получаем размеры контейнера
+          const containerWidth = container.offsetWidth;
+          const containerHeight = container.offsetHeight;
+
+          // Получаем размеры кнопки
+          const buttonWidth = noButton.offsetWidth;
+          const buttonHeight = noButton.offsetHeight;
+
+          // Устанавливаем область перемещения на 90% ширины и высоты контейнера
+          const moveAreaWidth = containerWidth * 0.9;
+          const moveAreaHeight = containerHeight * 0.5;
+
+          // Рассчитываем случайные координаты так, чтобы кнопка оставалась видимой внутри области перемещения
+          const randomX = Math.random() * (moveAreaWidth - buttonWidth);
+          const randomY = Math.random() * (moveAreaHeight - buttonHeight);
+
+          // Применяем новые координаты к кнопке
+          noButton.style.position = "absolute";
+          noButton.style.left = `${randomX}px`;
+          noButton.style.top = `${randomY}px`;
+      }
+
+      // Обработчики событий для ПК и мобильных устройств
+      const noButton = document.getElementById("noButton");
+
+      // Для ПК и устройств с поддержкой мыши
+      noButton.addEventListener("mouseover", moveButton);
+
+      // Для мобильных устройств (сенсорные экраны)
+      noButton.addEventListener("touchstart", function(e) {
+          e.preventDefault(); // Предотвращаем стандартное поведение (например, прокрутка)
+          moveButton();
+      });
+
+    </script>
+  
+
 <script
   src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
   integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc="

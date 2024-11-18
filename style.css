@@ -55,6 +55,7 @@ body {
 }
 
 .container {
+    position: relative;
     margin-bottom: 900px;
     display: flex;
     flex-direction: column;
@@ -62,13 +63,7 @@ body {
     align-items: center;
 }
 
-/* Position the "No" button absolutely within body */
-#noButton {
-    /* position: absolute;
-    margin-left: 150px;
-    transition: 0.5s; */
-    /* Smooth movement */
-}
+
 .text {
     font-family: monospace;
     background: white;
@@ -80,11 +75,6 @@ body {
     border-radius: 15px;
 }
 
-#yesButton {
-    /* position: absolute;
-    margin-right: 150px; */
-    /* Smooth movement */
-}
 
 .header_text {
     font-family: monospace;
@@ -129,10 +119,4 @@ body {
 
 img {
     width: 400px;
-    /*height: ;*/
-}
-
-#yesButton {
-    /* position: absolute; */
-    /* right: 850px; */
 }
