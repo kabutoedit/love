@@ -90,6 +90,7 @@ body {
 }
 
 .container2 {
+  height: 100%;
   gap: 10px;
   z-index: 5;
   margin-top: 150px;
@@ -135,7 +136,8 @@ input {
 }
 
 .love {
-  width: 90%;
+  margin-top: -30px;
+  width: 95%;
   color: white;
   font-size: 18px;
   font-family: monospace;
@@ -145,6 +147,7 @@ input {
 }
 
 img {
-  margin-top: -100px;
+  height: 250px;
+  margin-top: -80px;
   margin-left: 70px;
 }
